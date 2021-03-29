@@ -5,6 +5,13 @@ using System.Threading.Tasks;
 
 namespace RedisDemo.Extensions
 {
+    //Docker
+    //docker run --name my-redis -p 5002:6379 -d redis
+    //docker ps -a
+    //docker exec -it my-redis sh
+    //redis-cli
+    //Redis -> ping, select 0, dbsize, scan 0, hgetall <key>, clear
+
     public static class DistributedCacheExtensions
     {
         public static async Task SetRecordAsync<T>(this IDistributedCache cache,
